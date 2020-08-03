@@ -7,7 +7,7 @@
 - Фреймворк express
 - используется editorconfig и eslint.
 
-## версия 0.0.2
+## версия 0.0.3
 - по локальному адресу localhost:3000 загружается фронтенд проекта Mesto
 - в ответ на запрос GET localhost:3000/users сервер возвращает JSON-объект из файла users.json;
 - в ответ на запрос GET localhost:3000/cards сервер возвращает JSON-объект из файла cards.json;
