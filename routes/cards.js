@@ -15,9 +15,9 @@ cardsRouter.get('/cards', (req, res) => {
       }
     })
     .catch((err) => {
-      console.error(err.message);
-      console.error('Упс! Не сработало!');
-      res.status(500).send({ message: 'Упс! Не сработало!' });
+      if (err) {
+        res.status(500).send({ message: 'Упс! Не сработало!' });
+      }
     });
 });
 

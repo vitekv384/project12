@@ -15,9 +15,9 @@ usersRouter.get('/users', (req, res) => {
       }
     })
     .catch((err) => {
-      console.error(err.message);
-      console.error('Упс! Не сработало!');
-      res.status(500).send({ message: 'Упс! Не сработало!' });
+      if (err) {
+        res.status(500).send({ message: 'Упс! Не сработало!' });
+      }
     });
 });
 
@@ -30,9 +30,9 @@ usersRouter.get('/users/:id', (req, res) => {
       if (!user ? res.status(404).send(error.message) : res.status(200).send(user));
     })
     .catch((err) => {
-      console.error(err.message);
-      console.error('Упс! Не сработало!');
-      res.status(500).send({ message: 'Упс! Не сработало!' });
+      if (err) {
+        res.status(500).send({ message: 'Упс! Не сработало!' });
+      }
     });
 });
 
