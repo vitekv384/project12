@@ -27,7 +27,7 @@ usersRouter.get('/users/:id', (req, res) => {
       const users = JSON.parse(data);
       const user = users.find((item) => item._id === req.params.id);
       const error = { message: 'Нет пользователя с таким id' };
-      if (!user ? res.status(404).send(error.message) : res.status(200).send(user));
+      if (!user ? res.status(404).send(error) : res.status(200).send(user));
     })
     .catch((err) => {
       if (err) {
